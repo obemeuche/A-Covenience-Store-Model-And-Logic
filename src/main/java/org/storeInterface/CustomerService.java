@@ -1,9 +1,9 @@
 package org.storeInterface;
 
-import org.store.Product;
+import org.store.Products;
 
 public interface CustomerService {
-    default void buyProduct(Product product) {
+    default void buyProduct(Products products) {
 
     }
 }

@@ -3,13 +3,15 @@ package org.store;
 import org.storeEnum.Gender;
 import org.storeEnum.Qualification;
 import org.storeInterface.ManagerService;
+import org.storeInterface.UpdateProduct;
 
-public class Manager extends Staff implements ManagerService {
+public class Manager extends Staff implements ManagerService, UpdateProduct {
 
 
     public Manager(String name, String phoneNumber, String position, String emailAddress, Gender gender) {
         super(name, phoneNumber, position, emailAddress, gender);
     }
+
 
     @Override
     public void hireCashier(CashierApplicant cashierApplicant) {
@@ -20,4 +22,11 @@ public class Manager extends Staff implements ManagerService {
             System.out.println("We are sorry to inform you that you didn't meet the criteria for this position. Please try again next time.");
         }
     }
+
+    @Override
+    public void updateProduct(Products product) {
+        product.item.put(product.getName(), product.getPrice());
+        System.out.println("Product added successfully!");
+    }
+
 }

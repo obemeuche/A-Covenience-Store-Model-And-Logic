@@ -10,7 +10,7 @@ public class Customers implements CustomerService {
     private String emailAddress;
 
     @Override
-    public void buyProduct(Product product) {
+    public void buyProduct(Products products) {
 
     }
 }
