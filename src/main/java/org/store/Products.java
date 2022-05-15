@@ -1,5 +1,6 @@
 package org.store;
 
+import javax.swing.text.Position;
 import java.util.HashMap;
 
 public class Products {
@@ -9,9 +10,12 @@ public class Products {
 
     private double price;
 
+    public Products() {
+
+    }
+
     public Products(String name, double price) {
         this.name = name;
-        //this.category = category;
         this.price = price;
     }
 

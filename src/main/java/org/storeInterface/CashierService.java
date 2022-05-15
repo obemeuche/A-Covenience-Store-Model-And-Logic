@@ -1,9 +1,12 @@
 package org.storeInterface;
 
-public interface CashierService {
-    void sellProduct ();
+import org.store.Customers;
+import org.store.Products;
 
-    default void issueReceipt() {
+public interface CashierService {
+    void sellProduct (Products product, Customers customer);
+
+    default void issueReceipt(Products product, Customers customer) {
 
     }
 }
