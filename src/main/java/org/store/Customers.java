@@ -20,26 +20,30 @@ public class Customers implements CustomerService {
         this.amount = amount;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public String getProduct() {
         return product;
     }
 
-    public void setProduct(String product) {
-        this.product = product;
-    }
 
     public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(Double amount) {
-        this.amount = amount;
-    }
 
     @Override
     public void buyProduct(Products product, Customers customer) {
         if (customer.getProduct().equals(product.getName()) && customer.getAmount().equals(product.getPrice())) {
-            System.out.println("Hello "+ customer.name + ", you can go ahead with your purchase as the product is available.");
+            System.out.println("Hello "+ customer.name + ", your purchase has been successful! Please wait for your receipt.");
+        }
+        else if (customer.getProduct().equals(product.getName()) && customer.getAmount() > (product.getPrice())) {
+            System.out.println("Hello "+ customer.name + ", your purchase has been successful! Please wait for your receipt.");
+        }
+        else if (customer.getProduct().equals(product.getName()) && customer.getAmount() < (product.getPrice())) {
+            System.out.println("Hello "+ customer.name + ", your balance is insufficient for this purchase");
         }
         else {
             System.out.println("Check back later for product");

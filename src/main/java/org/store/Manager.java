@@ -21,7 +21,8 @@ public class Manager extends Staff implements ManagerService, UpdateProduct {
             System.out.print("Hello " + cashierApplicant.getName() + ", ");
             System.out.print("You have been successfully employed for the position of a Cashier. Welcome onboard!");
         } else {
-            System.out.println("We are sorry to inform you that you didn't meet the criteria for this position. Please try again next time.");
+            System.out.println("Hello " + " " + cashierApplicant.getName() + ", " + "we are sorry to inform you that you didn't " +
+                    "meet the criteria for this position. Please try again later.");
         }
     }
 

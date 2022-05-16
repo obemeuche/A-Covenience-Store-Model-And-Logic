@@ -4,16 +4,12 @@ import org.storeEnum.Gender;
 import org.storeEnum.Qualification;
 
 public class CashierApplicant {
-    private String name;
-    private String phoneNumber;
-    private Gender gender;
-    private Integer age;
-    private Qualification qualification;
-    private Integer interviewScore;
-
-    public CashierApplicant() {
-
-    }
+    final private String name;
+    final private String phoneNumber;
+    final private Gender gender;
+    final private Integer age;
+    final private Qualification qualification;
+    final private Integer interviewScore;
 
     public CashierApplicant(String name, String phoneNumber, Gender gender, Integer age, Qualification qualification, Integer interviewScore) {
         this.name = name;
@@ -28,47 +24,16 @@ public class CashierApplicant {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public Gender getGender() {
-        return gender;
-    }
-
-    public void setGender(Gender gender) {
-        this.gender = gender;
-    }
-
     public Integer getAge() {
         return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
     }
 
     public Qualification getQualification() {
         return qualification;
     }
 
-    public void setQualification(Qualification qualification) {
-        this.qualification = qualification;
-    }
-
     public Integer getInterviewScore() {
         return interviewScore;
     }
 
-    public void setInterviewScore(Integer interviewScore) {
-        this.interviewScore = interviewScore;
-    }
 }
